@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //Основные оперерации, синтаксис
 
 //public class Main {
@@ -64,23 +66,100 @@
 //
 //    }
 //}
+//
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        System.out.println("Переменные и типы данных");
+//
+////        переменная число с точкой
+//        float num = 4.252552f;
+//
+////        переменная один символ
+//        char ch = '5';
+//        //        переменная один символ
+//        String user_name = "Aleks";
+//
+////        переменная булевые значения
+//        boolean isHappy = false;
+//
+//        System.out.println(isHappy);
+//    }
+//}
 
+//// запрос ввода от пользователя
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//        System.out.print("Введите ваше имя ");
+//        scan.nextLine();
+//    }
+//}
+
+// запрос ввода от пользователя, добавление введённого в перменную и вывод этой переменной
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//        System.out.print("Введите ваше имя ");
+//        String username = scan.nextLine();
+//        System.out.print("Hi, " + username);
+//    }
+//}
+
+// запрос ввода от пользователя числовых значений метод int
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//        int num1 = scan.nextInt();
+//    }
+//}
+
+// различные методы для запроса ввода данных
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//        byte num1 = scan.nextByte();
+//        boolean f = scan.nextBoolean();
+//        float a = scan.nextFloat();
+//    }
+//}
+
+// операция сложения(вычитания, деления, умножения) над числами
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//
+//        short num = 5, num2 = 1;
+//        int res = num + num2;
+//        System.out.println("Результат: " + res);
+//    }
+//}
+
+// калькулятор
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Переменные и типы данных");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Введите число1 ");
+        float num = scan.nextFloat();
 
-//        переменная число с точкой
-        float num = 4.252552f;
+        System.out.print("Введите число2 ");
+        float num2 = scan.nextFloat();
 
-//        переменная один символ
-        char ch = '5';
-        //        переменная один символ
-        String user_name = "Aleks";
+        float res = num + num2;
+        float res1 = num - num2;
+        float res2 = num * num2;
+        float res3 = num / num2;
 
-//        переменная булевые значения
-        boolean isHappy = false;
 
-        System.out.println(isHappy);
+        System.out.println("Результат ");
+        System.out.println(res + "\n" + res1 + "\n" +res2 + "\n" +res3 + "\n" );
+
     }
 }
+
