@@ -141,25 +141,41 @@ import java.util.Scanner;
 //}
 
 // калькулятор
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner scan = new Scanner(System.in);
+//        System.out.print("Введите число1 ");
+//        float num = scan.nextFloat();
+//
+//        System.out.print("Введите число2 ");
+//        float num2 = scan.nextFloat();
+//
+//        float res = num + num2;
+//        float res1 = num - num2;
+//        float res2 = num * num2;
+//        float res3 = num / num2;
+//
+//
+//        System.out.println("Результат ");
+//        System.out.println(res + "\n" + res1 + "\n" +res2 + "\n" +res3 + "\n" );
+//
+//    }
+//}
+
+//условные операторы
+
 public class Main {
-
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Введите число1 ");
-        float num = scan.nextFloat();
-
-        System.out.print("Введите число2 ");
-        float num2 = scan.nextFloat();
-
-        float res = num + num2;
-        float res1 = num - num2;
-        float res2 = num * num2;
-        float res3 = num / num2;
-
-
-        System.out.println("Результат ");
-        System.out.println(res + "\n" + res1 + "\n" +res2 + "\n" +res3 + "\n" );
-
+        int age = 25;
+        if(age > 0) {
+            if(age > 16) {
+                System.out.println("Welcome!");
+            } else {
+                System.out.println("Too Young");
+            }
+        } else {
+            System.out.println("Error");
+        }
     }
 }
-
