@@ -165,38 +165,17 @@ import java.util.Scanner;
 
 //условные операторы
 
-//public class Main {
-//    public static void main(String[] args) {
-//        int age = 25;
-//        if(age > 0) {
-//            if(age > 16) {
-//                System.out.println("Welcome!");
-//            } else {
-//                System.out.println("Too Young");
-//            }
-//        } else {
-//            System.out.println("Error");
-//        }
-//    }
-//}
-
-//Цикл for
-
-//public class Main {
-//    public static void main(String[] args) {
-//        for(int x = 1; x <=5; x++) {
-//            System.out.println(x);
-//        }
-//    }
-//}
-
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new
-                Scanner(System.in);
-        int n = scanner.nextInt();
-        for (int i = 1; i <=n; i++) {
-            System.out.println("Welcome");
+        int age = 25;
+        if(age > 0) {
+            if(age > 16) {
+                System.out.println("Welcome!");
+            } else {
+                System.out.println("Too Young");
+            }
+        } else {
+            System.out.println("Error");
         }
     }
 }
