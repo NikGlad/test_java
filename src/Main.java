@@ -113,7 +113,8 @@ import java.util.Scanner;
 //
 //    public static void main(String[] args) {
 //        Scanner scan = new Scanner(System.in);
-//        int num1 = scan.nextInt();
+//
+
 //    }
 //}
 
@@ -180,6 +181,134 @@ import java.util.Scanner;
 //    }
 //}
 
+//условные операторы
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int age = 25;
+//        if(age > 0) {
+//            if(age > 16) {
+//                System.out.println("Welcome!");
+//            } else {
+//                System.out.println("Too Young");
+//            }
+//        } else {
+//            System.out.println("Error");
+//        }
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int a = 15, b = 10;
+//        if (a > b)  {
+//            System.out.println("yes");
+//        }
+//
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int a = 15, b = 10;
+//        boolean isHasCar = false;
+//        if (isHasCar == false && a != b)  {
+//            System.out.println("yes");
+//        } else if (a == b) {
+//            System.out.println("r");
+//        } else {
+//            System.out.println("no");
+//        }
+//
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Введите роль ");
+//        String role = scanner.nextLine();
+//        System.out.println("Введите пароль ");
+//        String pass = scanner.nextLine();
+//        if(role.equals("Admin") && pass.equals("1")) {
+//            System.out.println("Все пользователи ");
+//        } else {
+//            System.out.println("Привет, как вас зовут ");
+//            String name = scanner.nextLine();
+//        }
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args){
+//    Scanner scanner = new Scanner(System.in);
+//    int num = scanner.nextInt();
+//    switch (num){
+//        case 1:
+//            System.out.println("Ok");
+//            break;
+//        case 2:
+//            System.out.println("Okey");
+//            break;
+//        case 3:
+//            System.out.println("Okeushki");
+//            break;
+//        default:
+//            System.out.println("No");
+//    }
+//    }
+//}
+
+//калькулятор услловные операторы
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите 1 число ");
+        int num1 = scanner.nextInt();
+
+        System.out.println("Введите 2 число");
+        int num2 = scanner.nextInt();
+
+        System.out.println("Действие ");
+        String action = scanner.nextLine();
+        action = scanner.nextLine();
+
+        int res;
+
+        switch (action) {
+            case "+":
+                res = num1 + num2;
+                System.out.println("Рузультат" + res);
+                break;
+            case "-":
+                res = num1 - num2;
+                System.out.println("Рузультат" + res);
+                break;
+            case "*":
+                res = num1 * num2;
+                System.out.println("Рузультат" + res);
+                break;
+            case "/":
+                if(num2 == 0)
+                    System.out.println("Error");
+                else {
+                    res = num1 / num2;
+                    System.out.println("Рузультат" + res);
+                    break;
+                }
+            default:
+                System.out.println("Вы что то не то ввели");
+
+
+
+
+        }
+    }
+}
+
+
+
 
 //Цикл for
 
@@ -191,13 +320,13 @@ import java.util.Scanner;
 //    }
 //}
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new
-                Scanner(System.in);
-        int n = scanner.nextInt();
-        for (int i = 1; i <=n; i++) {
-            System.out.println("Welcome");
-        }
-    }
-}
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new
+//                Scanner(System.in);
+//        int n = scanner.nextInt();
+//        for (int i = 1; i <=n; i++) {
+//            System.out.println("Welcome");
+//        }
+//    }
+//}
