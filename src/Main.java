@@ -261,51 +261,51 @@ import java.util.Scanner;
 
 //калькулятор услловные операторы
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите 1 число ");
-        int num1 = scanner.nextInt();
-
-        System.out.println("Введите 2 число");
-        int num2 = scanner.nextInt();
-
-        System.out.println("Действие ");
-        String action = scanner.nextLine();
-        action = scanner.nextLine();
-
-        int res;
-
-        switch (action) {
-            case "+":
-                res = num1 + num2;
-                System.out.println("Рузультат" + res);
-                break;
-            case "-":
-                res = num1 - num2;
-                System.out.println("Рузультат" + res);
-                break;
-            case "*":
-                res = num1 * num2;
-                System.out.println("Рузультат" + res);
-                break;
-            case "/":
-                if(num2 == 0)
-                    System.out.println("Error");
-                else {
-                    res = num1 / num2;
-                    System.out.println("Рузультат" + res);
-                    break;
-                }
-            default:
-                System.out.println("Вы что то не то ввели");
-
-
-
-
-        }
-    }
-}
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Введите 1 число ");
+//        int num1 = scanner.nextInt();
+//
+//        System.out.println("Введите 2 число");
+//        int num2 = scanner.nextInt();
+//
+//        System.out.println("Действие ");
+//        String action = scanner.nextLine();
+//        action = scanner.nextLine();
+//
+//        int res;
+//
+//        switch (action) {
+//            case "+":
+//                res = num1 + num2;
+//                System.out.println("Рузультат" + res);
+//                break;
+//            case "-":
+//                res = num1 - num2;
+//                System.out.println("Рузультат" + res);
+//                break;
+//            case "*":
+//                res = num1 * num2;
+//                System.out.println("Рузультат" + res);
+//                break;
+//            case "/":
+//                if(num2 == 0)
+//                    System.out.println("Error");
+//                else {
+//                    res = num1 / num2;
+//                    System.out.println("Рузультат" + res);
+//                    break;
+//                }
+//            default:
+//                System.out.println("Вы что то не то ввели");
+//
+//
+//
+//
+//        }
+//    }
+//}
 
 
 
@@ -330,3 +330,29 @@ public class Main {
 //        }
 //    }
 //}
+
+
+
+/*
+Измерим температуру тела
+*/
+//
+//public class Main {
+//    private static boolean isHigh;
+//    private static boolean isLow;
+//
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        double bodyTemperature = scanner.nextDouble();
+//        isHigh = bodyTemperature > 37;
+//        isLow = bodyTemperature < 36;
+//        if (isHigh) {
+//            System.out.println("температура тела высокая");
+//        } else if (isLow) {
+//            System.out.println("температура тела низкая");
+//        } else {
+//            System.out.println("температура тела нормальная");
+//        }
+//    }
+//}
+
