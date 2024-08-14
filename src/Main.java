@@ -322,9 +322,9 @@ import java.util.Scanner;
 
 //public class Main {
 //    public static void main(String[] args) {
-//        Scanner scanner = new
+//        (((Scanner scanner = new
 //                Scanner(System.in);
-//        int n = scanner.nextInt();
+//        int n = scanner.nextInt();)))
 //        for (int i = 1; i <=n; i++) {
 //            System.out.println("Welcome");
 //        }
@@ -356,3 +356,19 @@ import java.util.Scanner;
 //    }
 //}
 
+
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        if (number < 5){
+            System.out.println("число меньше 5");
+        }else if (number > 5){
+            System.out.println("число больше 5");
+        }else if(number == 5){
+            System.out.println("число равно 5");
+        }
+
+    }
+}
