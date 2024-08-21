@@ -398,17 +398,17 @@ import java.util.Scanner;
 //    }
 //}
 
-public class Main {
-    public static String secret = "AmIGo";
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String string1 = scanner.nextLine();
-        if (string1.equalsIgnoreCase(secret)) {
-            System.out.println("доступ разрешен");
-        } else{
-            System.out.println("доступ запрещен");
-        }
-    }
-}
+//public class Main {
+//    public static String secret = "AmIGo";
+//
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        String string1 = scanner.nextLine();
+//        if (string1.equalsIgnoreCase(secret)) {
+//            System.out.println("доступ разрешен");
+//        } else{
+//            System.out.println("доступ запрещен");
+//        }
+//    }
+//}
 
