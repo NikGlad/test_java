@@ -356,3 +356,59 @@ import java.util.Scanner;
 //    }
 //}
 
+//сравнение строк и строк по ссылке
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        String string1 = scanner.nextLine();
+//        String string2 = scanner.nextLine();
+//
+//        if (string1.equals(string2)) {
+//            System.out.println("строки одинаковые");
+//        } else {
+//            System.out.println("строки разные");
+//        }
+//    }
+//}
+
+//public class Main {
+//    public static String string1 = "Амиго";
+//    public static String string2 = string1;
+//    public static String string3 = new String(string1);
+//
+//    public static void main(String[] args) {
+//        String same = "ссылки на строки одинаковые";
+//        String different = "ссылки на строки разные";
+//        if (string1 == string2) {
+//            System.out.println(same);
+//        }else{
+//            System.out.println(different);
+//        }
+//        if (string2 == string3) {
+//            System.out.println(same);
+//        }else{
+//            System.out.println(different);
+//        }
+//        if (string1 == string3) {
+//            System.out.println(same);
+//        }else{
+//            System.out.println(different);
+//        }
+//    }
+//}
+
+public class Main {
+    public static String secret = "AmIGo";
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String string1 = scanner.nextLine();
+        if (string1.equalsIgnoreCase(secret)) {
+            System.out.println("доступ разрешен");
+        } else{
+            System.out.println("доступ запрещен");
+        }
+    }
+}
+
