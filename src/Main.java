@@ -471,23 +471,60 @@ import java.util.Scanner;
 Незаполненный прямоугольник
 */
 
+//public class Main {
+//    public static void main(String[] args) {
+//        int height = 1;
+//        while (height <= 10) {
+//            int width = 1;
+//            while (width <= 20) {
+//                if (height == 1 || height == 10) {
+//                    System.out.print('Б');
+//                } else if (width == 1 || width == 20) {
+//                    System.out.print('Б');
+//                } else {
+//                    System.out.print(' ');
+//                }
+//                width++;
+//            }
+//            System.out.println();
+//            height++;
+//        }
+//    }
+//}
+
+/*
+Показываем, что получаем
+*/
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner console = new Scanner(System.in);
+//        while (true) {
+//            String s = console.nextLine();
+//            if (s.equals("enough")) {
+//                break;
+//            }
+//            System.out.println(s);
+//        }
+//    }
+//}
+
+/*
+Сумма чисел, не кратных 3
+*/
+
 public class Main {
     public static void main(String[] args) {
-        int height = 1;
-        while (height <= 10) {
-            int width = 1;
-            while (width <= 20) {
-                if (height == 1 || height == 10) {
-                    System.out.print('Б');
-                } else if (width == 1 || width == 20) {
-                    System.out.print('Б');
-                } else {
-                    System.out.print(' ');
-                }
-                width++;
+        int sum = 0;
+        int number = 0;
+        while (number <= 100) {
+            if (number % 3 == 0) {
+                number++;
+                continue;
             }
-            System.out.println();
-            height++;
+            sum = sum + number;
+            number++;
         }
+        System.out.println(sum);
     }
 }
