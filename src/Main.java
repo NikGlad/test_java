@@ -513,18 +513,84 @@ import java.util.Scanner;
 Сумма чисел, не кратных 3
 */
 
+//public class Main {
+//    public static void main(String[] args) {
+//        int sum = 0;
+//        int number = 0;
+//        while (number <= 100) {
+//            if (number % 3 == 0) {
+//                number++;
+//                continue;
+//            }
+//            sum = sum + number;
+//            number++;
+//        }
+//        System.out.println(sum);
+//    }
+//}
+
+/*
+Минимум из введенных чисел
+*/
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner console = new Scanner(System.in);
+//        int min = Integer.MAX_VALUE;
+//        while (console.hasNextInt()){
+//            int x = console.nextInt();
+//            if (x < min);
+//            min = x;
+//            System.out.println(min);
+//        }
+//
+//    }
+//}
+
+
+/*
+Максимум из введенных чисел
+*/
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner console = new Scanner(System.in);
+//
+//        int max = Integer.MIN_VALUE;
+//        while (console.hasNextInt()) {
+//            int x = console.nextInt();
+//            if (x % 2 == 0 && x > max) {
+//                max = x;
+//            }
+//        }
+//        System.out.println(max);
+//
+//        }
+//
+//}
+
+
+/*
+Второе минимальное число из введенных
+*/
+
 public class Main {
     public static void main(String[] args) {
-        int sum = 0;
-        int number = 0;
-        while (number <= 100) {
-            if (number % 3 == 0) {
-                number++;
-                continue;
+        Scanner console = new Scanner(System.in);
+
+        int min = Integer.MAX_VALUE;
+        int secondMin = Integer.MAX_VALUE;
+
+        while (console.hasNextInt()) {
+            int tmp = console.nextInt();
+            if (tmp < min) {
+                secondMin = min;
+                min = tmp;
+            } else if (tmp > min && tmp < secondMin) {
+                secondMin = tmp;
             }
-            sum = sum + number;
-            number++;
         }
-        System.out.println(sum);
+
+        System.out.println(secondMin);
     }
 }
