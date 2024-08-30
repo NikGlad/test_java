@@ -574,23 +574,85 @@ import java.util.Scanner;
 Второе минимальное число из введенных
 */
 
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner console = new Scanner(System.in);
+//
+//        int min = Integer.MAX_VALUE;
+//        int secondMin = Integer.MAX_VALUE;
+//
+//        while (console.hasNextInt()) {
+//            int tmp = console.nextInt();
+//            if (tmp < min) {
+//                secondMin = min;
+//                min = tmp;
+//            } else if (tmp > min && tmp < secondMin) {
+//                secondMin = tmp;
+//            }
+//        }
+//
+//        System.out.println(secondMin);
+//    }
+//}
+
+
+/*
+Четные числа
+*/
+
+//public class Main {
+//    public static void main(String[] args) {
+//        for (int i = 1; i < 16; i++)
+//            if (i % 2 == 0)
+//                System.out.println(i);
+//
+//    }
+//}
+
+/*
+Сумма кратных чисел
+*/
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int start = scanner.nextInt();
+//        int end = scanner.nextInt();
+//        int multiple = scanner.nextInt();
+//
+//        int sum = 0;
+//        for (int i = start; i < end; i++) {
+//            if (i % multiple != 0) {
+//                continue;
+//            }
+//            sum = sum + i;
+//        }
+//            System.out.println(sum);
+//    }
+//}
+
+//Рисуем на экране с помощью цикла for
+
+//public class Main {
+//    public static void main(String[] args) {
+//        for (int i = 0; i < 10; i++)
+//        {
+//            int starCount = 10 - i;
+//            for (int j = 0; j < starCount; j++)
+//                System.out.print("*");
+//            System.out.println();
+//        }
+//    }
+//}
+
 public class Main {
     public static void main(String[] args) {
-        Scanner console = new Scanner(System.in);
-
-        int min = Integer.MAX_VALUE;
-        int secondMin = Integer.MAX_VALUE;
-
-        while (console.hasNextInt()) {
-            int tmp = console.nextInt();
-            if (tmp < min) {
-                secondMin = min;
-                min = tmp;
-            } else if (tmp > min && tmp < secondMin) {
-                secondMin = tmp;
-            }
+                for (int i = 0; i < 10; i++)
+        {
+            int starCount = i + 1;
+            for (int j = 0; j < starCount; j++)
+                System.out.print("8");
+            System.out.println();
         }
-
-        System.out.println(secondMin);
     }
 }
