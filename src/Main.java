@@ -645,14 +645,105 @@ import java.util.Scanner;
 //    }
 //}
 
+//public class Main {
+//    public static void main(String[] args) {
+//                for (int i = 0; i < 10; i++)
+//        {
+//            int starCount = i + 1;
+//            for (int j = 0; j < starCount; j++)
+//                System.out.print("8");
+//            System.out.println();
+//        }
+//    }
+//}
+
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner console = new Scanner(System.in);
+//        String s;
+//        do
+//        {
+//            s = console.nextLine();
+//        }
+//        while (!s.equals("exit"));
+//    }
+//}
+
+/*
+Хорошего не бывает много
+*/
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        String string = scanner.nextLine();
+//        int number = scanner.nextInt();
+//
+//        do {
+//            System.out.println(string);
+//            number--;
+//        } while (number > 0 && number < 4);
+//
+//    }
+//}
+
+/*
+Площадь круга
+*/
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int radius = scanner.nextInt();
+//        double S = 3.14 * radius * radius;
+//        int x = (int)(S);
+//        System.out.println(x);
+//
+//    }
+//}
+
+/*
+Share a Coke
+*/
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int batle = scanner.nextInt();
+//        int people = scanner.nextInt();
+//        double res = batle * 1.0 / people;
+//        System.out.println(res);
+//
+//    }
+//}
+
+/*
+Скорость ветра
+*/
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int V = scanner.nextInt();
+//        int res = (int) Math.round(V * 3.6);
+//        System.out.println(res);
+//    }
+//}
+
+/*
+Стакан наполовину пуст или наполовину полон?
+*/
+
 public class Main {
     public static void main(String[] args) {
-                for (int i = 0; i < 10; i++)
-        {
-            int starCount = i + 1;
-            for (int j = 0; j < starCount; j++)
-                System.out.print("8");
-            System.out.println();
-        }
+        double glass = 0.5;
+        Scanner scanner = new Scanner(System.in);
+        boolean i = scanner.nextBoolean();
+        if (i == true)
+            System.out.println((int)Math.ceil(glass));
+        else if (i == false)
+            System.out.println((int)Math.floor(glass));
     }
 }
+
