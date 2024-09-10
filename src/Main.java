@@ -796,7 +796,6 @@ public class Main {
         if (array[4] % 2 == 0) {
             array[4] = -array[4];
         }
-
         System.out.println(array[0]);
         System.out.println(array[1]);
         System.out.println(array[2]);
