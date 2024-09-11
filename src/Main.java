@@ -777,30 +777,154 @@ Share a Coke
 
 //смена знака на противоположный
 
+//public class Main {
+//    public static int[] array = new int[]{-1, 2, 3, -4, -5};
+//
+//    public static void main(String[] args) {
+//        if (array[0] % 2 == 0) {
+//            array[0] = -array[0];
+//        }
+//        if (array[1] % 2 == 0) {
+//            array[1] = -array[1];
+//        }
+//        if (array[2] % 2 == 0) {
+//            array[2] = -array[2];
+//        }
+//        if (array[3] % 2 == 0) {
+//            array[3] = -array[3];
+//        }
+//        if (array[4] % 2 == 0) {
+//            array[4] = -array[4];
+//        }
+//        System.out.println(array[0]);
+//        System.out.println(array[1]);
+//        System.out.println(array[2]);
+//        System.out.println(array[3]);
+//        System.out.println(array[4]);
+//    }
+//}
+
+/*
+Объединяем массивы
+*/
+
+//public class Main {
+//    public static int[] firstArray = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+//    public static int[] secondArray = new int[]{10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+//    public static int[] resultArray;
+//
+//    public static void main(String[] args) {
+//        resultArray = new int[firstArray.length + secondArray.length];
+//        System.arraycopy(firstArray, 0, resultArray, 0, firstArray.length);
+//        System.arraycopy(secondArray, 0, resultArray, firstArray.length, secondArray.length);
+//        for (int i = 0; i < resultArray.length; i++) {
+//            System.out.print(resultArray[i] + ", ");
+//        }
+//    }
+//}
+
+/*
+Обратный порядок вывода чисел в масиве
+*/
+
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        int n = scanner.nextInt();
+//
+//        int[] data = new int[n];
+//        for (int i = 0; i < n; i++) {
+//            data[i] = scanner.nextInt();
+//        }
+//
+//        if (n % 2 == 0) {
+//            for (int i = data.length - 1; i >= 0; i--) {
+//                System.out.println(data[i]);
+//            }
+//        } else {
+//            for (int i = 0; i < data.length; i++) {
+//                System.out.println(data[i]);
+//            }
+//        }
+//    }
+//}
+
+/*
+Минимальное из N чисел Solution
+*/
+
+//public class Main {
+//    public static int[] array;
+//
+//    public static void main(String[] args) throws Exception {
+//        Scanner console = new Scanner(System.in);
+//        int n = console.nextInt();
+//        int[] array = new int[n];
+//        for (int i = 0; i < n; i++) {
+//            array[i] = console.nextInt();
+//        }
+//        int min = array[0];
+//
+//        for (int i = 1; i < n; i++) {
+//            if (array[i] < min)
+//
+//                min = array[i];
+//        }
+//        System.out.println(min);
+//    }
+//}
+
+/*
+Минимальное из N чисел Solution
+*/
+
+//public class Main {
+//public static int[] array;
+//
+//public static void main(String[] args) {
+//    Scanner scanner = new Scanner(System.in);
+//    int n = Integer.parseInt(scanner.nextLine());
+//
+//    array = new int[n];
+//    for (int i = 0; i < n; i++) {
+//        array[i] = Integer.parseInt(scanner.nextLine());
+//    }
+//
+//    int min = array[0];
+//    for (int i = 1; i < array.length; i++) {
+//        int number = array[i];
+//        if (number < min) {
+//            min = number;
+//        }
+//    }
+//    System.out.println(min);
+//}
+//}
+
+/*
+Максимальное из N чисел
+*/
+
 public class Main {
-    public static int[] array = new int[]{-1, 2, 3, -4, -5};
+    public static int[] array;
 
     public static void main(String[] args) {
-        if (array[0] % 2 == 0) {
-            array[0] = -array[0];
+        Scanner scanner = new Scanner(System.in);
+        int n = Integer.parseInt(scanner.nextLine());
+
+        array = new int[n];
+        for (int i = 0; array.length > i; i++) {
+            array[i] = Integer.parseInt(scanner.nextLine());
         }
-        if (array[1] % 2 == 0) {
-            array[1] = -array[1];
+
+        int max = array[0];
+        for (int i = 1; array.length > i; i++) {
+            int number = array[i];
+            if (max < number) {
+                max = number;
+            }
         }
-        if (array[2] % 2 == 0) {
-            array[2] = -array[2];
-        }
-        if (array[3] % 2 == 0) {
-            array[3] = -array[3];
-        }
-        if (array[4] % 2 == 0) {
-            array[4] = -array[4];
-        }
-        System.out.println(array[0]);
-        System.out.println(array[1]);
-        System.out.println(array[2]);
-        System.out.println(array[3]);
-        System.out.println(array[4]);
+        System.out.println(max);
     }
 }
-
