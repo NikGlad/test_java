@@ -905,26 +905,77 @@ Share a Coke
 /*
 Максимальное из N чисел
 */
+//
+//public class Main {
+//    public static int[] array;
+//
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int n = Integer.parseInt(scanner.nextLine());
+//
+//        array = new int[n];
+//        for (int i = 0; array.length > i; i++) {
+//            array[i] = Integer.parseInt(scanner.nextLine());
+//        }
+//
+//        int max = array[0];
+//        for (int i = 1; array.length > i; i++) {
+//            int number = array[i];
+//            if (max < number) {
+//                max = number;
+//            }
+//        }
+//        System.out.println(max);
+//    }
+//}
+
+/*
+Удаляем одинаковые строки
+*/
+
+//public class Main {
+//    public static String[] strings;
+//
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        strings = new String[6];
+//        String[] strings2 = new String[6];
+//        for (int i = 0; i < 6; i++) {
+//            strings[i] = strings2[i] = scanner.nextLine();
+//        }
+//        for (int i = 0; i < 6; i++) {
+//            for (int n = 0; n < 6; n++) {
+//                if (strings[i] != null && i != n && strings[i].equals(strings2[n])) {
+//                    strings[i] = null;
+//                }
+//            }
+//        }
+//
+//        for (int i = 0; i < strings.length; i++) {
+//            System.out.println(strings[i] + ", ");
+//        }
+//    }
+//}
+
+
+/*
+Таблица умножения
+*/
 
 public class Main {
-    public static int[] array;
+
+    public static int[][] MULTIPLICATION_TABLE;
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = Integer.parseInt(scanner.nextLine());
 
-        array = new int[n];
-        for (int i = 0; array.length > i; i++) {
-            array[i] = Integer.parseInt(scanner.nextLine());
-        }
-
-        int max = array[0];
-        for (int i = 1; array.length > i; i++) {
-            int number = array[i];
-            if (max < number) {
-                max = number;
+        int[][] MULTIPLICATION_TABLE = new int[10][10];
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                MULTIPLICATION_TABLE[i - 1][j - 1] = i * j;
+                System.out.print(MULTIPLICATION_TABLE[i - 1][j - 1]);
+                System.out.print(" ");
             }
+            System.out.println();
         }
-        System.out.println(max);
     }
 }
