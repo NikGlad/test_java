@@ -962,20 +962,98 @@ Share a Coke
 Таблица умножения
 */
 
+//public class Main {
+//
+//    public static int[][] MULTIPLICATION_TABLE;
+//
+//    public static void main(String[] args) {
+//
+//        int[][] MULTIPLICATION_TABLE = new int[10][10];
+//        for (int i = 1; i <= 10; i++) {
+//            for (int j = 1; j <= 10; j++) {
+//                MULTIPLICATION_TABLE[i - 1][j - 1] = i * j;
+//                System.out.print(MULTIPLICATION_TABLE[i - 1][j - 1]);
+//                System.out.print(" ");
+//            }
+//            System.out.println();
+//        }
+//    }
+//}
+
+
+/*
+Треугольный массив
+*/
+
+//public class Main {
+//
+//    public static int[][] result = new int[10][];
+//
+//    public static void main(String[] args) {
+//        for (int i = 0; i < result.length; i++) {
+//            result[i] = new int[i + 1];
+//            for (int j = 0; j < result[i].length; j++) {
+//                result[i][j] = i + j;
+//                System.out.print(result[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+//    }
+//}
+
+//public class Main {
+//
+//
+//    public static void main(String[] args) {
+//        int[][] matrix = new int[3][];
+//        matrix[0] = new int[]{1, 2, 3, 4, 5, 6};
+//        matrix[1] = new int[]{1, 2, 3};
+//        matrix[2] = new int[]{1};
+//        for (int i = 0; i < matrix.length; i++) {
+//            for (int j = 0; j < matrix[i].length; j++)
+//                System.out.print(matrix[i][j] + " ");
+//            System.out.println();
+//        }
+//    }
+//}
+
+/*
+Создаем двумерный массив (добавление значений в масив)
+*/
+
+//public class Main {
+//    public static int[][] multiArray;
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//
+//        int n = Integer.parseInt(scanner.nextLine());
+//
+//        multiArray = new int[n][];
+//        for (int i = 0; i < n; i++) {
+//            int size = Integer.parseInt(scanner.nextLine());
+//            multiArray[i] = new int[size];
+//        }
+//    }
+//}
+
+/*
+Создаем мультимассив
+*/
+
 public class Main {
 
-    public static int[][] MULTIPLICATION_TABLE;
+
+    public static int[][][] multiArray = new int[][][]{{{4, 8, 15}, {16}}, {{23, 42}, {}}, {{1}, {2}, {3}, {4, 5}}};
 
     public static void main(String[] args) {
-
-        int[][] MULTIPLICATION_TABLE = new int[10][10];
-        for (int i = 1; i <= 10; i++) {
-            for (int j = 1; j <= 10; j++) {
-                MULTIPLICATION_TABLE[i - 1][j - 1] = i * j;
-                System.out.print(MULTIPLICATION_TABLE[i - 1][j - 1]);
-                System.out.print(" ");
+        for (int i = 0; i < multiArray.length; i++) {
+            for (int j = 0; j < multiArray[i].length; j++) {
+                for (int k = 0; k < multiArray[i][j].length; k++) {
+                    System.out.print(multiArray[i][j][k] + " ");
+                }
+                System.out.println();
             }
-            System.out.println();
+            System.out.println("----------");
         }
     }
 }
