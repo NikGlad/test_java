@@ -1181,9 +1181,3 @@ Share a Coke
 //        System.out.println(index >= 0);
 //    }
 //}
-
-public class Main {
-
-    public static int[] A = new int[100];
-    System.out.println(A[100]);
-}
