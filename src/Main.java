@@ -1041,20 +1041,149 @@ Share a Coke
 Создаем мультимассив
 */
 
+//public class Main {
+//
+//
+//    public static int[][][] multiArray = new int[][][]{{{4, 8, 15}, {16}}, {{23, 42}, {}}, {{1}, {2}, {3}, {4, 5}}};
+//
+//    public static void main(String[] args) {
+//        for (int i = 0; i < multiArray.length; i++) {
+//            for (int j = 0; j < multiArray[i].length; j++) {
+//                for (int k = 0; k < multiArray[i][j].length; k++) {
+//                    System.out.print(multiArray[i][j][k] + " ");
+//                }
+//                System.out.println();
+//            }
+//            System.out.println("----------");
+//        }
+//    }
+//}
+
+/*
+Выводим массивы при помощи Arrays.toString
+*/
+
+//public class Main {
+//
+//    public static String[] strings = new String[]{"I", "love", "Java"};
+//    public static int[] ints = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+//
+//    public static void main(String[] args) {
+//        String i = Arrays.toString(strings);
+//            System.out.println(i);
+//
+//        String j = Arrays.toString(ints);
+//            System.out.println(j);
+//
+//    }
+//}
+
+/*
+Выводим двумерные массивы
+*/
+
+//public class Main {
+//
+//    public static String[][] strings = new String[][]{{"🙂", "🙂", "🙂", "🙂"}, {"🙃", "🙃", "🙃", "🙃"}, {"😋", "😋", "😋", "😋"}, {"😎", "😎", "😎", "😎"}};
+//    public static int[][] ints = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}, {13, 14, 15, 16}};
+//
+//    public static void main(String[] args) {
+//        String i = Arrays.deepToString(strings);
+//            System.out.println(i);
+//
+//        String j = Arrays.deepToString(ints);
+//            System.out.println(j);
+//    }
+//}
+
+
+/*
+Сравнение двумерных массивов
+*/
+
+//public class Main {
+//
+//    public static int[][] arrayFirst = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+//    public static int[][] arraySecond = new int[][]{{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};
+//
+//    public static void main(String[] args) {
+//        if (Arrays.deepEquals(arrayFirst, arraySecond))
+//            System.out.println(true);
+//        else
+//            System.out.println(false);
+//
+//    }
+//}
+
+
+
+/*
+Заполняем массив
+*/
+
+//public class Main {
+//    public static int[] array = new int[20];
+//    public static int valueStart = 10;
+//    public static int valueEnd = 13;
+//
+//    public static void main(String[] args) {
+//        int firstPart = array.length % 2 == 0 ? array.length / 2 : array.length / 2 + 1;
+//        Arrays.fill(array, 0, firstPart, valueStart);
+//        Arrays.fill(array, firstPart, array.length, valueEnd);
+//        System.out.println(Arrays.toString(array));
+//    }
+//}
+
+/*
+Делим массив
+*/
+
+//public class Main {
+//
+//    public static int[][] result = new int[2][];
+//    public static int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
+//
+//    public static void main(String[] args) {
+//        int firstPart = array.length % 2 == 0 ? array.length / 2 : array.length / 2 + 1;
+//        result[0] = Arrays.copyOfRange(array, 0, firstPart);
+//        result[1] = Arrays.copyOfRange(array, firstPart, array.length);
+//        System.out.println(Arrays.deepToString(result));
+//    }
+//}
+
+/*
+Сортировка массива
+*/
+//
+//public class Main {
+//
+//    public static int[] array = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+//
+//    public static void main(String[] args) {
+//        Arrays.sort(array);
+//        System.out.println(Arrays.toString(array));
+//    }
+//}
+
+/*
+Есть ли кто?
+*/
+
+//public class Main {
+//
+//    public static int[] array = {9, 8, 7, 6, 5, 4, 3, 2, 1};
+//    public static int element = 5;
+//
+//    public static void main(String[] args) {
+//        int[] copy = Arrays.copyOf(array, array.length);
+//        Arrays.sort(copy);
+//        int index = Arrays.binarySearch(copy, element);
+//        System.out.println(index >= 0);
+//    }
+//}
+
 public class Main {
 
-
-    public static int[][][] multiArray = new int[][][]{{{4, 8, 15}, {16}}, {{23, 42}, {}}, {{1}, {2}, {3}, {4, 5}}};
-
-    public static void main(String[] args) {
-        for (int i = 0; i < multiArray.length; i++) {
-            for (int j = 0; j < multiArray[i].length; j++) {
-                for (int k = 0; k < multiArray[i][j].length; k++) {
-                    System.out.print(multiArray[i][j][k] + " ");
-                }
-                System.out.println();
-            }
-            System.out.println("----------");
-        }
-    }
+    public static int[] A = new int[100];
+    System.out.println(A[100]);
 }
