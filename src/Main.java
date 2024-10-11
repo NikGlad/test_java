@@ -1181,3 +1181,231 @@ Share a Coke
 //        System.out.println(index >= 0);
 //    }
 //}
+
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int [ ] myArr = {6, 42, 3, 7};
+//        int sum=0;
+//        for(int x=0; x<myArr.length; x++) {
+//            sum += myArr[x];
+//        }
+//        System.out.println(sum);
+//    }
+//}
+
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int length = scanner.nextInt();
+//        int[] array =  new int[length];
+//        int sum = 0;
+//        for (int i = 0; i < length; i++) {
+//            array[i] = scanner.nextInt();
+//
+//            if (array[i] % 4 == 0)
+//                sum += array[i];
+//
+//
+//        }
+//        System.out.println(sum);
+//    }
+//}
+
+/*
+Разделяй понятия
+*/
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        {printHydrogenInfo();}
+//        {printJavaInfo();}
+//    }
+//
+//    public static void printHydrogenInfo()
+//    {
+//        System.out.println("Водород:");
+//        System.out.println("Это химический элемент периодической системы с обозначением H и атомным номером 1.");
+//        System.out.println("Является самым легким элементом таблицы.");
+//        System.out.println("Водород применяется в:");
+//        System.out.println("-Химической промышленности;");
+//        System.out.println("-Нефтеперерабатывающей промышленности;");
+//        System.out.println("-Авиации;");
+//        System.out.println("-Электроэнергетике.");
+//    }
+//
+//
+//    public static void printJavaInfo()
+//    {
+//        System.out.println("Остров Ява:");
+//        System.out.println("Входит в состав Индонезии.");
+//        System.out.println("На острове зародились государства Матарам, Маджапахит, Демак.");
+//        System.out.println("Ява является самым населенным островом в мире:");
+//        System.out.println("Общее население — 140 млн. человек.");
+//        System.out.println("Плотность населения — 1061 чел/км.кв.");
+//        System.out.println("Здесь производят один из знаменитых сортов кофе — Копи Лювак.");
+//    }
+//
+//}
+
+/*
+Упорядоченная информация
+*/
+
+//public class Main {
+//    public static void main(String[] args) {
+//        System.out.println("Я — поэт, зовусь я Цветик.");
+//        System.out.println("От меня вам всем приветик.");
+//    }
+//}
+
+//class Main
+//{
+//    public static void printLines(String text, int count)
+//    {
+//        for (int i = 0; i < count; i++)
+//            System.out.println(text);
+//    }
+//
+//    public static void main(String[] args)
+//    {
+//        printLines("Привет", 10);
+//        printLines("Пока", 20);
+//    }
+//}
+
+//class Main
+//{
+//    public static void printLines(String text, int count)
+//    {
+//        for (int i = 0; i < count; i++)
+//            System.out.print(text);
+//    }
+//
+//    public static void main(String[] args)
+//    {
+//        String text = "Привет";
+//        int count = 10;
+//        printLines(text, count);
+//    }
+//}
+
+/*
+Любимое блюдо
+*/
+
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        String firstName = "Ольга";
+//        String lastName = "Киприяновна";
+//        String favouriteDish = "Пельмени";
+//        printPersonInfo(firstName, lastName, favouriteDish);
+//    }
+//
+//    public static void printPersonInfo(String name, String surname, String meal){
+//            String firstName = name;
+//            String lastName = surname;
+//            String favouriteDish = meal;
+//
+//        System.out.println("Краткое досье:");
+//        System.out.println("Имя: " + name);
+//        System.out.println("Фамилия: " + surname);
+//        System.out.println("Любимое блюдо: " + meal);
+//    }
+//
+//}
+
+/*
+Ливерпульская четверка
+*/
+
+//public class Main {
+//    public static void main(String[] args) {
+//        String navigator = "Джон";
+//        String pilot = "Пол";
+//        String secondPilot = "Джордж";
+//        String flightEngineer = "Ринго";
+//        createCrew(navigator, pilot, secondPilot, flightEngineer);
+//    }
+//
+//    public static void createCrew(String navigator, String pilot, String secondPilot, String flightEngineer){
+//        System.out.println("Четвёрка, которой предстоит покорить космос:");
+//        System.out.println("Штурман: " + navigator);
+//        System.out.println("Пилот: " + pilot);
+//        System.out.println("Второй пилот: " + secondPilot);
+//        System.out.println("Бортинженер: " + flightEngineer);
+//    }
+//}
+
+/*
+Правильный порядок
+*/
+
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        int[] array = {11, 22, 33, 44, 55, 66, 77, 88, 99};
+//        printArray(array);
+//        reverseArray(array);
+//        printArray(array);
+//    }
+//
+//    public static void reverseArray(int[] array) {
+//        for (int i = 0; i < array.length / 2; i++) {
+//            int temp = array[i];
+//            array[i] = array[array.length - i - 1];
+//            array[array.length - i - 1] = temp;
+//        }
+//    }
+//
+//    public static void printArray(int[] array) {
+//        for (int i : array) {
+//            System.out.print(i + ", ");
+//        }
+//        System.out.println();
+//    }
+//}
+
+/*
+Универсальный солдат
+*/
+
+public class Main {
+
+    public static void main(String[] args) {
+
+    }
+
+    public static void universalMethod(){
+
+    }
+    public static void universalMethod(String str){
+
+    }
+    public static void universalMethod(String str, String str2){
+
+    }
+    public static void universalMethod(int[][] data, int value){
+
+    }
+    public static void universalMethod(int[] data, int value){
+
+    }
+    public static void universalMethod(int[][][] data, int value){
+
+    }
+    public static void universalMethod(int x, int y){
+
+    }
+    public static void universalMethod(int[][][][] data, int value){
+
+    }
+    public static void universalMethod(int[][][][][] data, int value){
+
+    }
+    public static void universalMethod(int[][][][][][] data, int value){
+
+    }
+}
