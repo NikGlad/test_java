@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 //Основные оперерации, синтаксис
@@ -1372,40 +1371,227 @@ Share a Coke
 Универсальный солдат
 */
 
+//public class Main {
+//
+//    public static void main(String[] args) {
+//
+//    }
+//
+//    public static void universalMethod(){
+//
+//    }
+//    public static void universalMethod(String str){
+//
+//    }
+//    public static void universalMethod(String str, String str2){
+//
+//    }
+//    public static void universalMethod(int[][] data, int value){
+//
+//    }
+//    public static void universalMethod(int[] data, int value){
+//
+//    }
+//    public static void universalMethod(int[][][] data, int value){
+//
+//    }
+//    public static void universalMethod(int x, int y){
+//
+//    }
+//    public static void universalMethod(int[][][][] data, int value){
+//
+//    }
+//    public static void universalMethod(int[][][][][] data, int value){
+//
+//    }
+//    public static void universalMethod(int[][][][][][] data, int value){
+//
+//    }
+//}
+
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        Scanner console = new Scanner(System.in);
+//        int[] array = new int[10];
+//        for (int i = 0; i < 10; i++) {
+//            array[i] = console.nextInt();
+//        }
+//        int min = array[0];
+//
+//        for (int i = 1; i < 10; i++) {
+//            if (array[i] < min)
+//
+//                min = array[i];
+//        }
+//        System.out.println(min);
+//
+//    }
+//}
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int n = 0;
+//
+//        while (n < 5)
+//        {
+//
+//            int m = 0;
+//
+//            while (m < 10)
+//            {
+//                System.out.print("Q");
+//                m++;
+//            }
+//
+//            System.out.println();
+//
+//            n++;
+//
+//        }
+//    }
+//}
+
+/*
+Знакомство с двумерным массивом
+*/
+
+//public class Main {
+//
+//    public static int[][] arrays = new int[2][3];    //создаём двумерный массив длиной 2 и 3
+//    public static void main(String[] args) {         // psvm
+//        for (int i = 0; i < arrays.length; i++) {    // делаем цикл перебора для первого значения масива, длиной не более длины масива(2)
+//            for (int j = 0; j < arrays[i].length; j++) {     // делаем цикл перебора для второго значения масива, длиной не более длины масива(3)
+//                arrays[i][j] = 1;                         // присваиваем значение двумерному масиву 1. т.е выведется 5 штук 1
+//                System.out.println(arrays[i][j]);         // выводим значение двумерного массива
+//            }
+//
+//        }
+//
+//    }
+//
+//    }
+
+/*
+Максимальный элемент
+*/
+
+//public class Main{
+//    public static int[][] array= new int[3][3];   //создаём двумерный массив длиной 3 и 3
+//
+//    public static void main(String[] args) {      // psvm
+//        Scanner sc = new Scanner(System.in);      // считываем с клавиатуры и помещаем в переменную sc
+//        int max = Integer.MIN_VALUE;              // создаём переменную max и делаем Минимальную величина типа int. Меньше неё не будет
+//
+//        for (int i = 0; i < array.length; i++) {   // делаем цикл перебора для первого значения масива, длиной не более длины масива(3)
+//            for (int j = 0; j < array[i].length; j++) {   // делаем цикл перебора для второго значения масива, длиной не более длины масива(3)
+//                array[i][j] = sc.nextInt();          // присваиваем двумерному массиву значение считанного с клавиатуры, котора помещена в переменную sc
+//                if (max < array[i][j]) {          //создаём условие если max < значений двумерного массива,
+//                    max = array[i][j];            // то переменная max = значению двумерного массива
+//                }
+//            }
+//
+//        }
+//        System.out.println(max);            // вывод максимального значения
+//    }
+//}
+
+/*
+Минимальная сумма
+*/
+
+
+//public class Main {
+//    public static int[][] arrays = new int[3][3];
+//
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        for (int i = 0; i < arrays.length; i++) {
+//            for (int j = 0; j < arrays[i].length; j++) {
+//                arrays[i][j] = sc.nextInt();
+//            }
+//        }
+//        int minSum = Integer.MAX_VALUE;
+//        for (int j = 0; j < arrays[0].length; j++) {
+//            int currentSum = 0;
+//            for (int i = 0; i < arrays.length; i++) {
+//                currentSum += arrays[i][j];
+//            }
+//            if (currentSum < minSum) {
+//                minSum = currentSum;
+//            }
+//        }
+//
+//        for (int i = 0; i < arrays.length; i++) {
+//            int currentSum = 0;
+//            for (int j = 0; j < arrays[i].length; j++) {
+//                currentSum += arrays[i][j];
+//            }
+//            if (currentSum < minSum) {
+//                minSum = currentSum;
+//            }
+//
+//        }
+//        System.out.println(minSum);
+//    }
+//
+//}
+
+/*
+Вот это переворот
+ */
+//public class Main {
+//    public static int[][]arrays = new int[3][3];
+//
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        for (int i = 0; i < arrays.length; i++) {
+//            for (int j = 0; j < arrays[0].length; j++) {
+//                arrays[i][j] = scanner.nextInt();
+//                }
+//            }
+//        for (int i = 0; i < arrays.length - 1; i++) {
+//            for (int j = i + 1; j < arrays[0].length; j++) {
+//                int temp = arrays[i][j];
+//                arrays[i][j] = arrays[j][i];
+//                arrays[j][i] = temp;
+//            }
+//        }
+//        for (int i = 0; i < arrays.length; i++) {
+//            for (int j = 0; j < arrays[0].length; j++) {
+//                System.out.print(arrays[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+//    }
+//}
+
+/*
+Пирамида
+ */
+
 public class Main {
-
+    public static char[][]array;
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        array = new char[number][2 * number - 1];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
+                if (j < array.length - i - 1  || j > array[0].length - array.length + i) {
+                    array[i][j] = ' ';
+                } else{
+                    array[i][j] = '#';
+                }
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
+                System.out.print(array[i][j]);
+            }
+            System.out.println();
+        }
     }
 
-    public static void universalMethod(){
-
-    }
-    public static void universalMethod(String str){
-
-    }
-    public static void universalMethod(String str, String str2){
-
-    }
-    public static void universalMethod(int[][] data, int value){
-
-    }
-    public static void universalMethod(int[] data, int value){
-
-    }
-    public static void universalMethod(int[][][] data, int value){
-
-    }
-    public static void universalMethod(int x, int y){
-
-    }
-    public static void universalMethod(int[][][][] data, int value){
-
-    }
-    public static void universalMethod(int[][][][][] data, int value){
-
-    }
-    public static void universalMethod(int[][][][][][] data, int value){
-
-    }
 }
+
