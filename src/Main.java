@@ -1,4 +1,6 @@
-import java.util.Scanner;
+import java.util.ArrayList;
+
+import static com.sun.org.apache.bcel.internal.classfile.Utility.printArray;
 
 //Основные оперерации, синтаксис
 
@@ -1570,28 +1572,163 @@ Share a Coke
 Пирамида
  */
 
+//public class Main {
+//    public static char[][]array;
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        int number = sc.nextInt();
+//        array = new char[number][2 * number - 1];
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < array[0].length; j++) {
+//                if (j < array.length - i - 1  || j > array[0].length - array.length + i) {
+//                    array[i][j] = ' ';
+//                } else{
+//                    array[i][j] = '#';
+//                }
+//            }
+//        }
+//        for (int i = 0; i < array.length; i++) {
+//            for (int j = 0; j < array[0].length; j++) {
+//                System.out.print(array[i][j]);
+//            }
+//            System.out.println();
+//        }
+//    }
+//
+//}
+
+
+/*
+Вырезаем середину
+ */
+
+//public class Main {
+//    public static char[][] chars = {
+//            {'a', 'b', 'c', 'd', 'e', 'f'},
+//            {'j', 'h', 'i', 'j', 'k', 'l'},
+//            {'m', 'n', 'o', 'p', 'q', 'r'},
+//            {'s', 't', 'u', 'v', 'w', 'x'}};
+//
+//    public static void main(String[] args) {
+//        printArray();
+//
+//        for (int i = 0; i < chars.length; i++) {
+//            for (int j = 0; j < chars[0].length; j++) {
+//                if (i != 0 && i != chars.length - 1 && j != 0 && j != chars[0].length - 1) {
+//                    chars[i][j] = '-';
+//                }
+//            }
+//        }
+//
+//        printArray();
+//    }
+//
+//    private static void printArray() {
+//        for (int i = 0; i < chars.length; i++) {
+//            for (int j = 0; j < chars[i].length; j++) {
+//                System.out.print(chars[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+//        System.out.println();
+//    }
+//}
+//
+
+
+//public class Main {
+//    public static void main(String[] args) {
+//        int[] x = new int[10];
+//        for (int i = 0; i < x.length; i++)
+//            x[i] = 999;
+//        System.out.println(Arrays.toString(x));
+//    }
+//}
+
+
+
+/*
+Построим новый жилой комплекс JavaRush Towers
+*/
+
+//public class Main {
+//    public static final String SKYSCRAPER_WAS_BUILD = "Небоскреб построен.";
+//    public static final String SKYSCRAPER_WAS_BUILD_FLOORS_COUNT = "Небоскреб построен. Количество этажей - ";
+//    public static final String SKYSCRAPER_WAS_BUILD_DEVELOPER = "Небоскреб построен. Застройщик - ";
+//
+//    public Main() {
+//        System.out.println(SKYSCRAPER_WAS_BUILD);
+//    }
+//
+//    public Main(int countOfFloors) {
+//        System.out.println(SKYSCRAPER_WAS_BUILD_FLOORS_COUNT + countOfFloors);
+//    }
+//
+//    public Main(String developer) {
+//        System.out.println(SKYSCRAPER_WAS_BUILD_DEVELOPER + developer);
+//    }
+//
+//    public static void main(String[] args) {
+//        Main main = new Main();
+//        Main skyscraperTower = new Main(50);
+//        Main skyscraperSkyline = new Main("JavaRushDevelopment");
+//    }
+//}
+
+/*
+таблица умнажения
+*/
+
+//
+
+//public class Main {
+//    public static void main(String[] args) {
+//        for (int i = 1; i < 10; i++) {
+//            for (int j = 2; j < 10; j++) {
+//                System.out.printf("%1d*%1d=%-2d ",i,j,i*j);
+//            }
+//            System.out.println();
+//        }
+//    }
+//}
+
+
+// COLLECTION
+
+
+/*
+Переворачивание данных
+*/
+
 public class Main {
-    public static char[][]array;
+    public static ArrayList<Integer> numbers = new ArrayList<>();
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int number = sc.nextInt();
-        array = new char[number][2 * number - 1];
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[0].length; j++) {
-                if (j < array.length - i - 1  || j > array[0].length - array.length + i) {
-                    array[i][j] = ' ';
-                } else{
-                    array[i][j] = '#';
-                }
-            }
-        }
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[0].length; j++) {
-                System.out.print(array[i][j]);
-            }
-            System.out.println();
+        init();
+        print();
+
+        reverse();
+        print();
+    }
+
+    public static void init() {
+        for (int i = 0; i < 10; i++) {
+            numbers.add(i);
         }
     }
 
-}
+    public static void reverse() {
+        int n = numbers.size() - 1;
+        for (int i = 0; i < numbers.size() / 2; i++) {
+            int temp = numbers.get(i);
+            numbers.set(i, numbers.get(n - i));
+            numbers.set(n - i, temp);
+        }
+    }
 
+    private static void print() {
+        for (int number : numbers) {
+            System.out.println(number);
+        }
+    }
+}
