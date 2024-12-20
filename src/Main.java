@@ -1,6 +1,10 @@
-import java.util.ArrayList;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.InputStreamReader;
+import java.util.*;
 
 import static com.sun.org.apache.bcel.internal.classfile.Utility.printArray;
+import static java.util.Arrays.asList;
 
 //Основные оперерации, синтаксис
 
@@ -1693,42 +1697,489 @@ Share a Coke
 //}
 
 
-// COLLECTION
+// СПИСКИ И GENERIC
 
 
 /*
-Переворачивание данных
+Солнечная система
+В 3020 году ученые научились выращивать новые планеты, одну из которых отправили в космос на орбиту Солнца.
+Эта планета находится между Землей и Марсом. Реализуй метод createNewPlanet(String),
+который должен добавлять переданную планету в список planets сразу после Земли.
+Посмотри, как изменился порядок следования планет.
+Методы main(), addPlanets() и print() не принимают участие в проверке.
 */
 
-public class Main {
-    public static ArrayList<Integer> numbers = new ArrayList<>();
+//public class Main {
+//    public static ArrayList<String> planets = new ArrayList<>();
+//
+//    public static void main(String[] args) {
+//        addPlanets();
+//        print();
+//        createNewPlanet("Звезда Смерти");
+//        print();
+//    }
+//
+//    public static void createNewPlanet(String planetName) {
+//        planets.add(planets.indexOf("Земля") + 1, planetName);
+//    }
+//
+//    public static void addPlanets() {
+//        planets.add("Меркурий");
+//        planets.add("Венера");
+//        planets.add("Земля");
+//        planets.add("Марс");
+//        planets.add("Юпитер");
+//        planets.add("Сатурн");
+//        planets.add("Уран");
+//        planets.add("Нептун");
+//    }
+//
+//    public static void print() {
+//        for (int i = 0; i < planets.size(); i++) {
+//            System.out.println(String.format("%s — %d-я планета от Солнца", planets.get(i), (i + 1)));
+//        }
+//        System.out.println();
+//    }
+//}
 
-    public static void main(String[] args) {
-        init();
-        print();
+/*
+Прощай, Паскаль
+В методе main найди и удали язык программирования Pascal из списка programmingLanguages.
+*/
 
-        reverse();
-        print();
-    }
+//public class Main {
+//    public static ArrayList<String> programmingLanguages = new ArrayList<>(Arrays.asList("C", "C++", "Python", "Java", "Pascal", "JavaScript", "Ruby"));
+//
+//    public static void main(String[] args) {
+//        for (int i = 0; i < programmingLanguages.size(); i++) {
+//            if (programmingLanguages.get(i).equals("Pascal")) {
+//                programmingLanguages.remove(i);
+//                break;
+//            }
+//        }
+//    }
+//}
 
-    public static void init() {
-        for (int i = 0; i < 10; i++) {
-            numbers.add(i);
-        }
-    }
+/*
+Разбираем пирамиду бокалов
+Задача простая: нужно разобрать пирамиду из бокалов, в чем нам поможет метод removeGlassesReverse.
+Этот метод должен снимать каждый ряд, начиная сверху (с конца списка). Тебе нужно реализовать этот метод.
+В тестировании тебе поможет метод main. Попробуй запустить программу и посмотреть на вывод.
+*/
+//
+//public class Main {
+//
+//    private static ArrayList<String> initList() {
+//        String glassTop     = "       🍷       ";
+//        String glassSecond  = "      🍷🍷      ";
+//        String glassThird   = "     🍷🍷🍷     ";
+//        String glassFourth  = "    🍷🍷🍷🍷    ";
+//        String glassFifth   = "   🍷🍷🍷🍷🍷   ";
+//        String glassSixth   = "  🍷🍷🍷🍷🍷🍷  ";
+//        String glassSeventh = " 🍷🍷🍷🍷🍷🍷🍷 ";
+//        String glassEighth  = "🍷🍷🍷🍷🍷🍷🍷🍷";
+//        ArrayList<String> list = new ArrayList<>();
+//        list.add(glassEighth);
+//        list.add(glassSeventh);
+//        list.add(glassSixth);
+//        list.add(glassFifth);
+//        list.add(glassFourth);
+//        list.add(glassThird);
+//        list.add(glassSecond);
+//        list.add(glassTop);
+//        return list;
+//    }
+//
+//    public static void print(ArrayList<String> glasses) {
+//        for(int i = glasses.size() - 1; i >= 0; i--) {
+//            System.out.println(glasses.get(i));
+//        }
+//    }
+//
+//    public static void removeGlassesReverse(ArrayList<String> glasses) {
+//        System.out.println("Начинаем разбирать пирамиду...");
+//
+//        for (int i = glasses.size() - 1; i >= 0; i--) {
+//            glasses.remove(i);
+//        }
+//
+//        if(glasses.size() == 0) {
+//            System.out.println("Пирамида разобрана!");
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        ArrayList<String> glasses = initList();
+//        print(glasses);
+//
+//        removeGlassesReverse(glasses);
+//        print(glasses);
+//    }
+//}
 
-    public static void reverse() {
-        int n = numbers.size() - 1;
-        for (int i = 0; i < numbers.size() / 2; i++) {
-            int temp = numbers.get(i);
-            numbers.set(i, numbers.get(n - i));
-            numbers.set(n - i, temp);
-        }
-    }
+/*
+Вперед в будущее
+В классе Solution есть поля number, string и метод main с объявленными в нем переменными.
+ Тебе нужно заменить объявления переменных на var, где это возможно.
+ Порядок следования переменных не должен меняться.
+Пример: Scanner console = new Scanner(System.in);
+Заменить на: var console = new Scanner(System.in);
+*/
 
-    private static void print() {
-        for (int number : numbers) {
-            System.out.println(number);
-        }
-    }
-}
+//public class Main {
+//private int number = 54;
+//        private String string = "string";
+//
+//        public static void main(String[] args) {
+//            int integer = 22;
+//            String string = "string";
+//            int[] array = new int[5];
+//            ArrayList<String> strings = new ArrayList<String>();
+//            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+//            Integer maxValue = Integer.valueOf(Integer.MAX_VALUE);
+//        }
+//}
+
+/*
+Назад в прошлое
+В классе Solution есть поле intArray, геттер и сеттер для него, и метод main с объявленными в нем переменными.
+Тебе нужно заменить типы переменных с var на конкретный тип объекта (изменять названия и инициализацию объектов нельзя),
+а также починить геттер и сеттер поля intArray.
+*/
+
+//public class Main {
+//    private var intArray = new int[4];
+//
+//    public var getIntArray() {
+//        return intArray;
+//    }
+//
+//    public void setIntArray(var intArray) {
+//        this.intArray = intArray;
+//    }
+//
+//    public static void main(String[] args) {
+//        var solution = new Solution();
+//        var string = new String("Hello");
+//        var stringBuilder = new StringBuilder();
+//    }
+//}
+
+/*
+Shine bright like a diamond
+В методе main создаются объекты разных типов.
+В некоторых случаях тип элементов объекта можно опустить и просто использовать оператор diamond(<>).
+Замени тип элементов объекта на оператор diamond там, где это возможно, не меняя левую часть выражений.
+ Порядок следования переменных не должен меняться.
+*/
+
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        ArrayList<String> stringArrayList = new ArrayList<String>();
+//        Stack<String> stack = new Stack<String>();
+//        Map<String, ArrayList<String>> map = new HashMap<String, ArrayList<String>>();
+//        var exceptionsList = new ArrayList<Exception>();
+//        var filesStack = new Stack<File>();
+//    }
+//}
+
+/*
+Охотники за привидением: в погоне за типами
+В методе main создается и заполняется список разными объектами и передается методу checkElementsType(ArrayList<Object>).
+Твоя задача — реализовать этот метод, который должен определить тип каждого элемента списка, а также:
+Для типа String вызывать printString();
+Для типа Integer вызывать printInteger();
+Для типа Integer[] вызывать printIntegerArray();
+Для всех остальных типов вызывать printUnknown().
+Метод main не участвует в проверке.
+*/
+
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        var elements = new ArrayList<>();
+//        elements.add("Привет");
+//        elements.add(10);
+//        elements.add(new Integer[15]);
+//        elements.add(new LinkageError());
+//
+//        checkElementsType(elements);
+//    }
+//
+//    public static void checkElementsType(ArrayList<Object> elements) {
+//        for (int i = 0; i < elements.size(); i++) {
+//            if (elements.get(i) instanceof String) {
+//                printString();
+//            } else if (elements.get(i) instanceof Integer) {
+//                printInteger();
+//            } else if (elements.get(i) instanceof Integer[]) {
+//                printIntegerArray();
+//            } else {
+//                printUnknown();
+//            }
+//        }
+//    }
+//
+//    public static void printString() {
+//        System.out.println("Строка");
+//    }
+//
+//    public static void printInteger() {
+//        System.out.println("Целое число");
+//    }
+//
+//    public static void printIntegerArray() {
+//        System.out.println("Массив целых чисел");
+//    }
+//
+//    public static void printUnknown() {
+//        System.out.println("Другой тип данных");
+//    }
+//}
+
+/*
+Выводим в консоли разные типы
+В классе Solution есть метод printAnything(ArrayList), который должен принимать список и выводить его содержимое в консоли.
+Сейчас на вход принимается только список строк.
+Твоя задача исправить метод так, чтобы принимался список с любыми типами данных (для этого нужно удалить соответствующий дженерик).
+ Метод main не участвует в проверке.
+ */
+
+//public class Main {
+//
+//    public static void printAnything(ArrayList arrayList) {
+//        for (int i = 0; i < arrayList.size(); i++) {
+//            System.out.println(arrayList.get(i));
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        var arrayList = new ArrayList<>();
+//        arrayList.add(15);
+//        arrayList.add("Hello");
+//        arrayList.add(154);
+//        arrayList.add("string");
+//
+//        printAnything(arrayList);
+//    }
+//}
+
+// COLLECTION
+
+/*
+Оформляем возврат
+
+В классе Solution есть метод arrayToHashSet(String[]),
+который должен из переданного массива вернуть HashSet<String> с теми же элементами.
+ Метод main не участвует в проверке.
+*/
+
+//public class Main {
+//    public static void main(String[] args) {
+//        String[] array = {"Через", "три", "года", "я", "буду", "Senior", "Java", "Developer"};
+//        for (int i = 0; i < array.length; i++) {
+//            System.out.println(array[i]);
+//        }
+//        System.out.println("___________________________________");
+//
+//        HashSet<String> hashSet = arrayToHashSet(array);
+//        for(String s : hashSet) {
+//            System.out.println(s);
+//        }
+//    }
+//
+//    public static HashSet<String> arrayToHashSet(String[] strings) {
+//        HashSet<String> hashSet = new HashSet<>();
+//        for (int i = 0; i < strings.length; i++) {
+//            hashSet.add(strings[i]);
+//        }
+//        return hashSet;
+//    }
+//}
+
+/*
+Проверка присутствия
+В классе Solution есть метод checkWords(String),
+который должен проверять наличие переданного слова в множестве words.
+Если слово есть, то выводим в консоль: Слово [переданное слово] есть в множестве
+Если нет: Слова [переданное слово] нет в множестве
+Метод main не участвует в проверке.
+Пример вывода: Слово Java есть в множестве
+*/
+
+//public class Main {
+//    public static HashSet<String> words = new HashSet<>(asList("Если бы меня попросили выбрать язык на замену Java я бы не выбирал".split(" ")));
+//
+//    public static void checkWords(String word) {
+//        if (words.contains(word)) {
+//            System.out.println(String.format("Слово %s есть в множестве", word));
+//        } else {
+//            System.out.println(String.format("Слова %s нет в множестве", word));
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        checkWords("JavaScript");
+//        checkWords("Java");
+//    }
+//}
+
+/*
+Выводим в консоли элементы множества
+В классе Solution есть метод print(HashSet<String>),
+который должен выводить в консоли все элементы множества, используя iterator().
+Метод main не участвует в проверке.
+*/
+
+//public class Main {
+//
+//    public static void print(HashSet<String> words) {
+//        Iterator<String> iterator = words.iterator();
+//        while (iterator.hasNext()) {
+//            String word = iterator.next();
+//            System.out.println(word);
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        HashSet<String> words = new HashSet<>(Arrays.asList("Программированию обычно учат на примерах.".split(" ")));
+//        print(words);
+//    }
+//}
+
+/*
+Переводим итератор в цикл for-each
+
+В классе Solution есть методы printHashSet(HashSet<String>) и printList(ArrayList<String>),
+которые выводят все элементы из переданных коллекций — списка и множества — с новой строки.
+Твоя задача переписать методы на использование цикла for-each. Метод main не участвует в проверке.
+*/
+
+//public class Main {
+//
+//    public static void printList(ArrayList<String> words) {
+//        for (Iterator<String> iterator = words.iterator(); iterator.hasNext(); ) {
+//            String word = iterator.next();
+//            System.out.println(word);
+//        }
+//    }
+//
+//    public static void printHashSet(HashSet<String> words) {
+//        Iterator<String> iterator = words.iterator();
+//        while (iterator.hasNext()) {
+//            String word = iterator.next();
+//            System.out.println(word);
+//        }
+//    }
+//
+//    public static void main(String[] args) {
+//        String[] wordsArray = "Думаю, это будет новой фичей. Только не говорите никому, что она возникла случайно.".split(" ");
+//        ArrayList<String> wordsList = new ArrayList<>(Arrays.asList(wordsArray));
+//        HashSet<String> wordsHashSet = new HashSet<>(wordsList);
+//        printList(wordsList);
+//        System.out.println("__________________________________");
+//        printHashSet(wordsHashSet);
+//    }
+//}
+
+/*
+Найти и обезвредить
+
+В классе Solution объявлены методы, которые тебе нужно реализовать следующим образом:
+removeBugWithFor(ArrayList<String>) - должен удалить строку из списка, если она содержит слово bug,
+используя цикл for и счетчик.
+removeBugWithWhile(ArrayList<String>) - должен удалить строку из списка, если она содержит слово bug,
+ используя цикл while и метод iterator().
+removeBugWithCopy(ArrayList<String>) - должен удалить строку из списка, если она содержит слово bug,
+используя цикл for-each и копию списка.
+В слове bug может быть разный регистр букв (BUg, BuG, и т.д.).
+Метод main реализован для вашего кода и не участвует в проверке.
+*/
+
+//public class Main {
+//    public static String bug = "bug";
+//
+//    public static void main(String[] args) {
+//        ArrayList<String> words = new ArrayList<>();
+//        words.add("Hello world!");
+//        words.add("Amigo");
+//        words.add("Elly");
+//        words.add("Kerry");
+//        words.add("Bug");
+//        words.add("bug");
+//        words.add("Easy ug");
+//        words.add("Risha");
+//
+//        ArrayList<String> copyWordsFirst = new ArrayList<>(words);
+//        ArrayList<String> copyWordsSecond = new ArrayList<>(words);
+//        ArrayList<String> copyWordsThird = new ArrayList<>(words);
+//
+//        removeBugWithFor(copyWordsFirst);
+//        removeBugWithWhile(copyWordsSecond);
+//        removeBugWithCopy(copyWordsThird);
+//
+//        copyWordsFirst.forEach(System.out::println);
+//        String line = "_________________________";
+//        System.out.println(line);
+//        copyWordsSecond.forEach(System.out::println);
+//        System.out.println(line);
+//        copyWordsThird.forEach(System.out::println);
+//        System.out.println(line);
+//    }
+//
+//    public static void removeBugWithFor(ArrayList<String> list) {
+//        for (int i = 0; i < list.size(); i++) {
+//            String str = list.get(i);
+//            if (bug.equalsIgnoreCase(str)) {
+//                list.remove(str);
+//                i--;
+//            }
+//        }
+//    }
+//
+//    public static void removeBugWithWhile(ArrayList<String> list) {
+//        Iterator<String> it = list.iterator();
+//        while (it.hasNext()) {
+//            String str = it.next();
+//            if (bug.equalsIgnoreCase(str)) {
+//                it.remove();
+//            }
+//        }
+//    }
+//
+//    public static void removeBugWithCopy(ArrayList<String> list) {
+//        ArrayList<String> listCopy = new ArrayList<>(list);
+//        for (String str : listCopy) {
+//            if (bug.equalsIgnoreCase(str)) {
+//                list.remove(str);
+//            }
+//        }
+//    }
+//}
+
+
+/*
+Преобразование списка во множество
+
+В этой задаче нужно получить количество уникальных слов в списке.
+Одним из способов решения является преобразования списка во множество. Как известно,
+во множестве все элементы уникальные и размер полученного множества как раз и будет количеством уникальных слов.
+Реализуй метод listToSet(ArrayList<String>), который преобразует список строк во множество.
+*/
+
+//public class Main {
+//
+//    public static void main(String[] args) {
+//        ArrayList<String> listOfWords = new ArrayList<>(asList(
+//                "В свет вышла новая серия книг по программированию на Java: \"Java для начинающих\", \"Java для продолжающих\", \"Java для заканчивающих\""
+//                        .split(" ")));
+//        System.out.println("Количество слов в списке: " + listOfWords.size());
+//        HashSet<String> setOfWords = listToSet(listOfWords);
+//        System.out.println("Количество слов во множестве: " + setOfWords.size());
+//    }
+//
+//    public static HashSet<String> listToSet(ArrayList<String> listOfWords) {
+//        return new HashSet<>(listOfWords);
+//    }
+//}
