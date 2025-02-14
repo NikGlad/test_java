@@ -2189,14 +2189,17 @@ removeBugWithCopy(ArrayList<String>) - должен удалить строку 
 class Friend {
     public String name;
     private String mail;
+    int age;
 
 
-    // чтобы обратиться из другого класса(метода) (String name, String mail) по аргументам надо создать такую конструкцию
-    public Friend(String name, String mail) {
+    // чтобы обратиться из другого класса(метода) к этому методу  по аргументам (String name, String mail) надо создать такую конструкцию
+    public Friend(String name, String mail, int age) {
         this.name = name;
         this.mail = mail;
+        this.age = age;
     }
 
+    // чтобы обратиться из другого класса(метода) к этому методу и он делал то что в этом методе, надо оставить пустой return
     public String getName1() {
         System.out.println("Фёдор");
         return "";
@@ -2212,10 +2215,12 @@ class Friend {
 
 public class Main {
     public static void main(String[] args) {
-        Friend friend = new Friend("Ivan", "Ivan@mail.ru"); // в скобках это значения аргументов, котрые присвоены в другом классе
+        Friend friend = new Friend("Ivan", "Ivan@mail.ru", 38); // в скобках это значения аргументов, котрые присвоены в другом классе
         System.out.println(friend.name); // => Ivan
         System.out.println(friend.getName1());
         System.out.println(friend.getMail()); // => Ivan@mail.ru
         System.out.println(friend.getName()); //=> Ivan
+        System.out.println(friend.age); // => 38
+
     }
 }
