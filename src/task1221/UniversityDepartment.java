@@ -22,7 +22,7 @@ public class UniversityDepartment {
 
     public static void printStudentNames(ArrayList students) {
         for (int i = 0; i < students.size(); i++) {
-            System.out.println(students.get(i).getName());
+            System.out.println(students.get(i).getClass());
         }
     }
 }
