@@ -2217,7 +2217,7 @@ public class Main {
     public static void main(String[] args) {
         Friend friend = new Friend("Ivan", "Ivan@mail.ru", 38); // в скобках это значения аргументов, котрые присвоены в другом классе
         System.out.println(friend.name); // => Ivan
-        System.out.println(friend.getName1());
+        System.out.println(friend.getName1()); // => Фёдор
         System.out.println(friend.getMail()); // => Ivan@mail.ru
         System.out.println(friend.getName()); //=> Ivan
         System.out.println(friend.age); // => 38
